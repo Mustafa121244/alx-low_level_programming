@@ -31,5 +31,5 @@ char *cap_string(char *entry)
 			}
 		}
 	}
-	return (0);
+	return (entry);
 }
