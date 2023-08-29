@@ -1,22 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code for main.
+ *_strcat - Write a function that concatenates two strings.
  *
- * Return: Always 0.
+ *@dest: This is the output dest
+ *@src: This is the input source
+ *
+ * Return: This return to dest, that concatenates two strings
  */
-int main(void)
-{
-    char s1[98] = "Hello ";
-    char s2[] = "World!\n";
-    char *p;
 
-    printf("%s\n", s1);
-    printf("%s", s2);
-    p = _strcat(s1, s2);
-    printf("%s", s1);
-    printf("%s", s2);
-    printf("%s", p);
-    return (0);
+char *_strcat(char *dest, char *src)
+{
+	int i, j;
+
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[i] = src[j];
+		i++;
+	}
+	return (dest);
 }
